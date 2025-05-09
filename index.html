@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Villalba | Desarrollador de Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .section-divider {
+            height: 100px;
+            background: linear-gradient(to bottom right, transparent 49%, white 50%), 
+                        linear-gradient(to top right, white 49%, transparent 50%);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .skill-badge {
+            transition: all 0.3s ease;
+        }
+        .skill-badge:hover {
+            transform: scale(1.05);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="text-xl font-bold text-blue-600">Lucas Villalba</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600">Inicio</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">Sobre mí</a>
+                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600">Proyectos</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-blue-600">Servicios</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contacto</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4 shadow-md">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Inicio</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">Sobre mí</a>
+            <a href="#projects" class="block py-2 text-gray-700 hover:text-blue-600">Proyectos</a>
+            <a href="#services" class="block py-2 text-gray-700 hover:text-blue-600">Servicios</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient pt-24 pb-20 md:pt-32 md:pb-28">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Hola, soy <span class="text-blue-600">Lucas Villalba</span></h1>
+                    <p class="text-xl text-gray-600 mb-8">Técnico desarrollador de software con pasión por crear soluciones digitales innovadoras.</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Contactame</a>
+                        <a href="#projects" class="border border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-medium transition duration-300">Ver proyectos</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-xl overflow-hidden border-4 border-white">
+                        <!-- Placeholder for profile image -->
+                            <div class="relative w-64 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-xl overflow-hidden border-4 border-white">
+                                <img src="C:\Users\LUCKS\Desktop\portafolio\lucas.jpg" alt="Foto de Lucas Villalba" class="w-full h-full object-cover">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="section-divider"></div>
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16">Sobre <span class="text-blue-600">mí</span></h2>
+            
+            <div class="md:flex items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold mb-4">Desarrollador comprometido y analítico</h3>
+                    <p class="text-gray-600 mb-6">
+                        Soy un técnico desarrollador de software con experiencia en proyectos personales y formación en 
+                        <span class="font-medium">Henry Academia</span> y <span class="font-medium">INFoD de Resistencia, Chaco, Argentina</span>. 
+                        Aunque aún no tengo experiencia laboral formal en IT, estoy altamente motivado y en constante aprendizaje, 
+                        buscando oportunidades para desarrollarme profesionalmente.
+                    </p>
+                    <p class="text-gray-600 mb-8">
+                        Me apasiona resolver problemas a través del código y crear aplicaciones que sean tanto funcionales como atractivas visualmente.
+                    </p>
+                    <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition duration-300">Contáctame</a>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h4 class="text-xl font-semibold mb-6">Mis habilidades</h4>
+                    <div class="flex flex-wrap gap-3 mb-8">
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full">ReactJS</span>
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full">JavaScript</span>
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full">HTML5</span>
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full">CSS3</span>
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Redux</span>
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full">TypeScript</span>
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Node.js</span>
+                        <span class="skill-badge bg-blue-100 text-blue-800 px-4 py-2 rounded-full">PostgreSQL</span>
+                    </div>
+                    
+                    <h4 class="text-xl font-semibold mb-4">Educación</h4>
+                    <div class="space-y-4">
+                        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
+                            <h5 class="font-medium">Henry Academia</h5>
+                            <p class="text-gray-600 text-sm">Bootcamp de desarrollo web full stack</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg border-l-4 border-blue-500">
+                            <h5 class="font-medium">INFoD - Resistencia, Chaco</h5>
+                            <p class="text-gray-600 text-sm">Formación en desarrollo de software</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <div class="section-divider"></div>
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16">Mis <span class="text-blue-600">proyectos</span></h2>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-mobile-alt text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">App de Rick and Morty</h3>
+                        <p class="text-gray-600 mb-4">
+                            Aplicación web conectada a la API pública de Rick and Morty, con funcionalidades de búsqueda, favoritos y diseño completamente responsivo.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">React</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Redux</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">TypeScript</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">HTML</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">CSS</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+                            Ver más detalles <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-book text-white text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Wiki App</h3>
+                        <p class="text-gray-600 mb-4">
+                            Aplicación tipo wiki con sistema de usuarios, modo invitado, buscador y favoritos. Backend con Node.js y base de datos PostgreSQL.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">React</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Node.js</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Redux</span>
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">PostgreSQL</span>
+                        </div>
+                        <a href="#" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center">
+                            Ver más detalles <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <div class="section-divider"></div>
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16">Mis <span class="text-blue-600">servicios</span></h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-desktop text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Reparación de PC</h3>
+                    <p class="text-gray-600">
+                        Soluciones técnicas para problemas de hardware y software en computadoras personales.
+                    </p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-store text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Sistemas para comercios</h3>
+                    <p class="text-gray-600">
+                        Desarrollo de sistemas personalizados para kioscos y pequeños comercios.
+                    </p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-photo-video text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Edición de video/foto</h3>
+                    <p class="text-gray-600">
+                        Servicios profesionales de edición y retoque fotográfico y de video.
+                    </p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-gamepad text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Instalación de juegos</h3>
+                    <p class="text-gray-600">
+                        Instalación y configuración de juegos y películas en diferentes dispositivos.
+                    </p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-book-open text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Trabajos prácticos</h3>
+                    <p class="text-gray-600">
+                        Asesoramiento y desarrollo de trabajos prácticos escolares y universitarios.
+                    </p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="bg-gray-50 rounded-lg p-6 shadow-sm hover:shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Clases de programación</h3>
+                    <p class="text-gray-600">
+                        Clases personalizadas de apoyo en programación para diferentes niveles.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <div class="section-divider"></div>
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16">Contácta<span class="text-blue-600">me</span></h2>
+            
+            <div class="md:flex">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h3 class="text-2xl font-semibold mb-6">Información de contacto</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Teléfono</h4>
+                                <p class="text-gray-600">+54 3704 917300</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Correo electrónico</h4>
+                                <p class="text-gray-600">villalbalucas25@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Ubicación</h4>
+                                <p class="text-gray-600">El Colorado, Formosa, Argentina</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="font-semibold mb-4">Redes sociales</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-100 hover:bg-blue-200 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-blue-100 hover:bg-blue-200 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 transition duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="bg-blue-100 hover:bg-blue-200 w-10 h-10 rounded-full flex items-center justify-center text-blue-600 transition duration-300">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-white p-6 rounded-lg shadow-sm">
+                        <div class="mb-4">
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Correo electrónico</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-4">
+                            <label for="subject" class="block text-gray-700 font-medium mb-2">Asunto</label>
+                            <input type="text" id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition duration-300">
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <span class="text-xl font-bold">Lucas Villalba</span>
+                    <p class="mt-2 text-gray-400">Técnico desarrollador de software</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+                    <div>
+                        <h3 class="font-semibold mb-4">Navegación</h3>
+                        <ul class="space-y-2">
+                            <li><a href="#home" class="text-gray-400 hover:text-white">Inicio</a></li>
+                            <li><a href="#about" class="text-gray-400 hover:text-white">Sobre mí</a></li>
+                            <li><a href="#projects" class="text-gray-400 hover:text-white">Proyectos</a></li>
+                            <li><a href="#services" class="text-gray-400 hover:text-white">Servicios</a></li>
+                            <li><a href="#contact" class="text-gray-400 hover:text-white">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-4">Contacto</h3>
+                        <ul class="space-y-2 text-gray-400">
+                            <li class="flex items-center"><i class="fas fa-phone mr-2"></i> +54 3704 917300</li>
+                            <li class="flex items-center"><i class="fas fa-envelope mr-2"></i> villalbalucas25@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-700">
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <p class="text-sm text-gray-400">© 2023 Lucas Villalba. Todos los derechos reservados.</p>
+                <div class="flex mt-4 space-x-6 sm:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
